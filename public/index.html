@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="join-container">
       <h1>Buzzer App</h1>
       <input type="text" id="username" placeholder="Enter your name" />
+      <input type="text" id="room" placeholder="Enter room name" />
+      <button id="joinButton">Join Room</button>
+    </div>
+    <div class="container" id="buzzer-container" style="display: none">
+      <h1>Buzzer App - <span id="roomName"></span></h1>
       <button id="buzzButton">Buzz!</button>
       <div id="message"></div>
       <button id="resetButton">Reset</button>
