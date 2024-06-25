@@ -8,25 +8,38 @@ const io = socketIo(server);
 
 app.use(express.static("public"));
 
-let buzzedUser = null;
-
 io.on("connection", (socket) => {
   console.log("a user connected");
 
-  socket.on("buzz", (username) => {
-    if (!buzzedUser) {
-      buzzedUser = username;
-      io.emit("buzzed", username);
+  socket.on("joinRoom", ({ username, room }) => {
+    socket.join(room);
+    socket.username = username;
+    socket.room = room;
+
+    console.log(`${username} joined room ${room}`);
+    io.to(room).emit("message", `${username} has joined the room`);
+  });
+
+  socket.on("buzz", () => {
+    if (socket.room) {
+      io.to(socket.room).emit("buzzed", socket.username);
     }
   });
 
   socket.on("reset", () => {
-    buzzedUser = null;
-    io.emit("reset");
+    if (socket.room) {
+      io.to(socket.room).emit("reset");
+    }
   });
 
   socket.on("disconnect", () => {
     console.log("user disconnected");
+    if (socket.room) {
+      io.to(socket.room).emit(
+        "message",
+        `${socket.username} has left the room`
+      );
+    }
   });
 });
 
