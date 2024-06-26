@@ -28,8 +28,7 @@ Install QBuzzer
 1. ***Clone the repository*** 
 
 ```bash
-git clone https://github.com/yourusername/buzzer-app.git
-cd buzzer-app
+cd qbuzzer-app
 ```
 
 2. ***Install dependencies***
