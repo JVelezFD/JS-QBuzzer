@@ -49,6 +49,9 @@ node server.js
 4. ***Open your browser and navigate to http://localhost:3000.***
 ## Usage/Examples
 
+
+![QBuzzer App](https://github.com/JVelezFD/QBuzzer/assets/101678295/9f7e15ac-f44a-433d-a980-72c9db8fc7e9)
+
 1. ***Join a Room:***
 - Enter your name, email, and room name.
 - Click the "Join Room" button.
