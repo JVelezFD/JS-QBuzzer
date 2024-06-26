@@ -55,4 +55,9 @@ socket.on("message", (data) => {
   const messageElement = document.createElement("div");
   messageElement.innerHTML = `<img src="${avatar}" alt="${username}" class="avatar"> ${message}`;
   messageDiv.appendChild(messageElement);
+
+  // Remove the join message after 3 seconds
+  setTimeout(() => {
+    messageDiv.removeChild(messageElement);
+  }, 3000);
 });
