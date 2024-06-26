@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buzzer App</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="container" id="join-container">
-      <h1>Buzzer App</h1>
-      <input type="text" id="username" placeholder="Enter your name" />
-      <input type="text" id="room" placeholder="Enter room name" />
-      <button id="joinButton">Join Room</button>
+        <h1>Buzzer App</h1>
+        <input type="text" id="username" placeholder="Enter your name">
+        <input type="text" id="avatar" placeholder="Enter avatar URL">
+        <!-- Or provide a selection for predefined avatars -->
+        <input type="text" id="room" placeholder="Enter room name">
+        <button id="joinButton">Join Room</button>
     </div>
-    <div class="container" id="buzzer-container" style="display: none">
-      <h1>Buzzer App - <span id="roomName"></span></h1>
-      <button id="buzzButton">Buzz!</button>
-      <div id="message"></div>
-      <button id="resetButton">Reset</button>
+    <div class="container" id="buzzer-container" style="display:none;">
+        <h1>Buzzer App - <span id="roomName"></span></h1>
+        <button id="buzzButton">Buzz!</button>
+        <div id="message"></div>
+        <button id="resetButton">Reset</button>
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
