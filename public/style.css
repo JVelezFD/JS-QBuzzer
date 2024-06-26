@@ -1,18 +1,109 @@
-body {
-  font-family: Arial, sans-serif;
+/* General Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
 }
+
 .container {
   text-align: center;
+  background: #fff;
+  border: 5px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
 }
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000;
+  text-transform: uppercase;
+  background: linear-gradient(
+    to right,
+    #ff0040,
+    #ff7700,
+    #ffe600,
+    #1fff00,
+    #00ffe7,
+    #0077ff,
+    #a000ff
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"] {
+  background-color: #f0f0f0;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  color: #000;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: #000;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+  transform: rotate(45deg);
+}
+
+button:hover::before {
+  top: -25%;
+  left: -25%;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(5px, 5px);
+}
+
 #message {
   margin-top: 20px;
-  font-size: 1.5em;
-  color: green;
 }
 
 .avatar {
@@ -20,4 +111,6 @@ body {
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0 #000;
 }
