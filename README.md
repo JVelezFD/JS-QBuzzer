@@ -28,8 +28,7 @@ Install QBuzzer
 1. ***Clone the repository*** 
 
 ```bash
-git clone https://github.com/yourusername/buzzer-app.git
-cd buzzer-app
+cd qbuzzer-app
 ```
 
 2. ***Install dependencies***
@@ -48,6 +47,9 @@ node server.js
 
 4. ***Open your browser and navigate to http://localhost:3000.***
 ## Usage/Examples
+
+
+![QBuzzer App](https://github.com/JVelezFD/QBuzzer/assets/101678295/9f7e15ac-f44a-433d-a980-72c9db8fc7e9)
 
 1. ***Join a Room:***
 - Enter your name, email, and room name.
