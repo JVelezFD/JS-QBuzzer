@@ -41,7 +41,7 @@ npm install
 3. ***Run App***
 
 ```bash
-node server.js
+node index.js
 
 ```
 
